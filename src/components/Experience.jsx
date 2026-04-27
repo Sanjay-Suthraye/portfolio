@@ -50,14 +50,28 @@ const Experience = () => {
                 {/* Content */}
                 <div className="w-5/12">
                   <div className="card hover:scale-105 transition-transform duration-300">
-                    <h4 className="text-xl font-bold text-slate-800 dark:text-white mb-2">
-                      {job.position}
-                    </h4>
-                    <div className="flex items-center gap-2 text-blue-600 dark:text-blue-400 font-semibold mb-2">
+                    <div className="flex items-center gap-2 text-blue-600 dark:text-blue-400 font-semibold mb-3">
                       <FiBriefcase size={18} />
                       {job.company}
                     </div>
-                    <div className="text-sm text-slate-500 dark:text-gray-400">
+                    {job.roles ? (
+                      <div className="space-y-2 mb-2">
+                        {job.roles.map((role, rIndex) => (
+                          <div key={rIndex} className="flex items-start gap-2">
+                            <div className="mt-1.5 w-2 h-2 rounded-full bg-blue-400 dark:bg-blue-500 flex-shrink-0"></div>
+                            <div>
+                              <p className="text-sm font-semibold text-slate-800 dark:text-white leading-tight">{role.position}</p>
+                              <p className="text-xs text-slate-500 dark:text-gray-400">{role.duration}</p>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    ) : (
+                      <h4 className="text-xl font-bold text-slate-800 dark:text-white mb-2">
+                        {job.position}
+                      </h4>
+                    )}
+                    <div className="text-xs text-slate-400 dark:text-gray-500 mt-2 border-t border-gray-100 dark:border-dark-600 pt-2">
                       {job.duration}
                     </div>
                   </div>

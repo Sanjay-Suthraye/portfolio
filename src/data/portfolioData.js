@@ -1,16 +1,17 @@
 export const portfolioData = {
   personal: {
     name: "Sanjay Suthraye",
-    title: "Senior Data Scientist | AI & ML Engineer",
+    title: "Data Scientist / AI/ML Engineer",
     tagline: "Designing AI/ML solutions that drive real-world impact",
+    status: "Available Immediately",
     email: "sanjay.suthraye96@gmail.com",
     phone: "+49 15207556339",
     location: "Berlin, Germany",
-    bio: "Full Stack Data Scientist and AI Engineer with 7 years of expertise integrating Statistical Modelling and Generative AI. Specialist in developing comprehensive intelligence systems, encompassing the design of Agentic Frameworks (LangGraph, MCP) and RAG solutions, as well as the implementation of robust Predictive Models (XGBoost, Random Forest) and Time-Series Forecasts. Demonstrated success at AstraZeneca and Tesco in transforming traditional analytics into scalable, containerised microservices (Docker, FastAPI) that yield quantifiable business results.",
+    bio: "Data scientist with 7 years of experience designing and implementing AI/ML and core data science solutions in enterprise environments. I have a solid grasp of generative AI, LLMs, and RAG systems, and I'm well-versed in NLP, predictive analytics, and machine learning architectures like LSTM, XGBoost, Random Forest, and CatBoost.",
     image: "/profile.jpg",
-    languages: ["English - Fluent", "German - A2 (Enrolled in Intensive Course)"],
+    languages: ["English - Fluent", "German - A1 and A2 (Learning)"],
   },
-
+  
   socials: {
     github: "https://github.com/Sanjay-Suthraye",
     linkedin: "https://www.linkedin.com/in/sanjaysuthraye/",
@@ -64,53 +65,78 @@ export const portfolioData = {
     }
   ],
   
+  volunteering: [
+    {
+      role: "Industry Mentor",
+      organization: "Christ University, Bangalore",
+      duration: "Apr 2025 - Jan 2026 · 10 mos",
+      cause: "Education",
+      description: "Recognized as Industry Mentor under 'Inheritance-2025' for M.Sc. (Data Science) 2024–'26 batch students aspiring to become Data Scientists."
+    },
+    {
+      role: "Volunteer",
+      organization: "Make A Difference",
+      duration: "Jan 2017 - Jun 2017 · 6 mos",
+      cause: "Children",
+      description: "Volunteered with Make-A-Difference India, focusing on enriching lives and supporting children's development."
+    },
+    {
+      role: "Guest Speaker",
+      organization: "Christ University, Bangalore",
+      duration: "",
+      cause: "Education",
+      description: "Delivered guest lectures on data science and AI topics for undergraduate and postgraduate students."
+    },
+    {
+      role: "Event Coordinator",
+      organization: "AMC Engineering College",
+      duration: "Mar 2017 - Apr 2017 · 2 mos",
+      cause: "Arts and Culture",
+      description: "Coordinated college events encompassing arts and cultural programs."
+    }
+  ],
+
   skills: {
     "Machine Learning & AI": [
       "Generative AI",
       "Large Language Models (LLMs)",
-      "Agentic Frameworks (LangGraph, MCP)",
       "Retrieval-Augmented Generation (RAG)",
-      "GraphRAG",
       "Natural Language Processing (NLP)",
-      "XGBoost, Random Forest, CatBoost, LightGBM",
-      "Predictive Modeling & Statistical Analysis",
-      "A/B Testing & Causal Inference",
-      "Time-Series Forecasting (SARIMAX, LSTM, Prophet)",
-      "Weak Supervision (Snorkel)",
-      "Active Learning",
-      "Model Explainability (SHAP, LIME)",
+      "XGBoost, Random Forest, Clustering",
+      "Predictive Modeling",
+      "Reinforcement Learning",
       "Survival Analysis",
-      "Clustering (K-Means++, DBSCAN)"
+      "Time-Series Forecasting",
+      "Model Explainability (XAI)",
+      "Fairness & Bias Detection"
     ],
-    "Advanced Techniques": [
+    "Core Competencies": [
       "Churn Prediction",
       "Market Mix Modelling",
       "Customer Segmentation",
+      "Enrichment Models",
       "Pricing Models",
       "ROI Optimization",
-      "Hypothesis Testing",
-      "Central Composite Design",
-      "Adstock Transforms"
+      "A/B Testing",
+      "Causal Inference"
     ],
-    "Libraries & Frameworks": [
+    "Libraries": [
       "PyTorch",
       "TensorFlow",
       "Keras",
       "Scikit-learn",
       "Hugging Face Transformers",
       "LangChain",
-      "FastAPI",
       "XGBoost",
       "LightGBM",
       "spaCy",
       "NLTK",
       "OpenCV",
       "Pandas",
-      "NumPy",
-      "SciPy"
+      "NumPy"
     ],
     "Cloud & MLOps": [
-      "AWS (SageMaker, S3, ECS, Lambda, Step Functions)",
+      "AWS (Lambda, ECS, EKS, S3, API Gateway, Serverless)",
       "GCP Vertex AI",
       "Docker",
       "Kubernetes",
@@ -118,16 +144,8 @@ export const portfolioData = {
       "Apache Airflow",
       "Databricks",
       "CI/CD Pipelines",
-      "Model Deployment & Monitoring"
-    ],
-    "Data Platforms": [
-      "Snowflake",
-      "Snowpark",
-      "BigQuery",
-      "Apache Kafka",
-      "Tableau",
-      "Power BI",
-      "MongoDB"
+      "Model Deployment",
+      "Model Monitoring"
     ],
     "Programming & Tools": [
       "Python",
@@ -135,6 +153,7 @@ export const portfolioData = {
       "SQL",
       "PySpark",
       "Spark",
+      "Snowflake",
       "Git",
       "Shell Scripting",
       "REST APIs",
@@ -142,9 +161,19 @@ export const portfolioData = {
       "Jupyter",
       "VS Code"
     ],
+    "Data Engineering": [
+      "Apache Kafka",
+      "BigQuery",
+      "MongoDB",
+      "Tableau",
+      "Power BI",
+      "Seaborn",
+      "Matplotlib",
+      "Dash"
+    ],
     "Leadership": [
       "Technical Mentorship",
-      "Data Science Strategy",
+      "AI/ML Strategy",
       "Cross-Functional Collaboration",
       "Agile/Scrum",
       "Stakeholder Communication",
@@ -155,20 +184,22 @@ export const portfolioData = {
   experience: [
     {
       company: "ASTRAZENECA",
-      position: "AI Engineering Specialist / Data Scientist",
-      duration: "Sep 2025 - Present / Apr 2023 - Sep 2025",
+      domain: "Pharmaceuticals / Healthcare",
+      duration: "Apr 2023 - Present",
       location: "Remote",
-      description: "Leading AI/ML initiatives and building advanced LLM-based solutions for healthcare and pharmaceutical applications.",
+      roles: [
+        { position: "AI Engineering Specialist", duration: "Sep 2025 - Present" },
+        { position: "Data Scientist", duration: "Apr 2023 - Sep 2025" }
+      ],
+      description: "Leading AI/ML and GenAI engineering initiatives across the Oncology Business Unit, building scalable intelligence systems for pharmaceutical applications.",
       achievements: [
-        "Designed an Agentic AI Platform (LangGraph, MCP) to automate intricate marketing procedures, decreasing data access latency by 30%",
-        "Engineered and implemented AWS Step Functions for Precision Targeting, deploying more than 5 predictive models (Supervised & Unsupervised) via CI/CD with automated retraining",
-        "Utilised SHAP analysis to determine feature selection and enhance business explainability",
-        "Won the Achiever Z Annual Award (Sep'24) for Patient Journey LLM project in the Lead AI and Insights category",
-        "Presented Patient Journey LLM technical architecture at the PMSA Conference in New Delhi, receiving top recognition",
-        "Directed Time-Series Forecasting projects by comparing Statistical methods (SARIMAX) with Deep Learning techniques (LSTM)",
-        "Mitigated inadequacy of Ground Truth data utilising Weak Supervision (Snorkel) and Active Learning techniques",
-        "Engineered Snowpark pipelines to provide augmented labels to classifiers, yielding a 10% enhancement in Ground Truth labels",
-        "Developed comprehensive Experimentation Framework (A/B Testing) employing Hypothesis Testing and Central Composite Design"
+        "Received the Achiever Z Annual Award (Sep 2024) for spearheading the Patient Journey Analytics project in the Lead AI and Insights category",
+        "Presented the Patient Journey LLM system architecture at the PMSA Conference in New Delhi, receiving top recognition",
+        "Designed an Agentic AI Platform (LangGraph, MCP) to automate marketing workflows, reducing data access latency by 30%",
+        "Engineered AWS Step Functions for Precision Targeting, deploying 5+ predictive models via CI/CD with automated retraining; used SHAP for feature selection and business explainability",
+        "Directed Time-Series Forecasting projects comparing SARIMAX with LSTM across NBRx trend forecasting, cutting operational costs by 30%",
+        "Mitigated ground truth scarcity using Weak Supervision (Snorkel) and Active Learning; built Snowpark pipelines delivering a 10% improvement in dependent label quality",
+        "Built a comprehensive A/B Testing and Experimentation Framework using Hypothesis Testing and Central Composite Design to empirically assess model effects"
       ]
     },
     {
@@ -178,14 +209,11 @@ export const portfolioData = {
       location: "Bengaluru, India",
       description: "Led data science initiatives focused on customer analytics, churn prediction, and business optimization.",
       achievements: [
-        "Developed and containerised Churn Prediction Microservice employing XGBoost and CatBoost, overseeing more than 200k homes",
-        "Validated model effectiveness by rigorous A/B testing, yielding a 38% enhancement in retention",
-        "Engineered scalable Product Choice Optimiser and Market Mix Modelling framework utilising PySpark, managing millions of transactions",
-        "Employed Adstock transforms to model advertising decay and applied multi-objective optimisation to achieve substantial enhancements in return on advertising investment",
-        "Automated High Value Customer (HVC) segmentation processes employing K-Means++ on Hadoop clusters to efficiently categorise customers according to behavioural characteristics",
-        "Implemented machine learning models to identify clients with significant growth potential inside cohorts, enabling dynamic tracking that informed targeted marketing activities",
-        "Led a hackathon-winning project (Apr 2022) focused on employee wellness, improving workplace welfare",
-        "Recognised as Employee of the Month (Apr 2022) within the Spotlight program for contributions to data science"
+        "Received Employee of the Month award (Apr'22) through the Spotlight program for data science contributions",
+        "Led a hackathon-winning project (Apr'22) focused on employee health that improved workplace wellbeing",
+        "Developed a customer churn prediction model forecasting attrition 6 weeks ahead for 200K+ households using Random Forest, Logistic Regression, and CatBoost",
+        "Ran A/B tests on churn prevention models that increased household retention by 38% and highlighted critical gaps in shopping patterns",
+        "Built a Product Choice Optimizer using a multi-model approach to maximize ROI, incorporating Adstock variables as marketing impact features"
       ]
     },
     {
@@ -202,14 +230,19 @@ export const portfolioData = {
     },
     {
       company: "DXC TECHNOLOGY",
-      position: "Senior Analyst at Helpdesk",
-      duration: "Mar 2019 - Apr 2020",
+      domain: "IT Services",
+      duration: "Jun 2018 - Apr 2020",
       location: "India",
-      description: "Optimized helpdesk operations using ML and data analysis to improve customer service metrics.",
+      roles: [
+        { position: "Senior Analyst at Helpdesk", duration: "Mar 2019 - Apr 2020" },
+        { position: "Technical Analyst (Contractor)", duration: "Jun 2018 - Mar 2019" }
+      ],
+      description: "Applied ML and data analysis to optimize helpdesk operations and customer service metrics.",
       achievements: [
-        "Designed an ML model using Named-entity recognition to analyze customer reviews, identifying key sentiment drivers",
-        "Optimized team traffic workflows with regression analysis, cutting average handling time by 15%",
-        "Managed SQL/MS SQL databases and maintained a central knowledge base that improved information sharing"
+        "Designed an ML model using Named Entity Recognition to analyze customer reviews and identify primary sentiment drivers",
+        "Optimized team traffic workflows with regression analysis, reducing average handling time by 15%",
+        "Examined call flow data to identify trends that improved first-call resolution rates",
+        "Managed SQL/MS SQL databases and maintained a centralized knowledge repository that improved information dissemination"
       ]
     }
   ],

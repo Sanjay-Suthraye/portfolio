@@ -1,5 +1,5 @@
 import { portfolioData } from '../data/portfolioData';
-import { FiGithub, FiLinkedin, FiMail } from 'react-icons/fi';
+import { FiGithub, FiLinkedin, FiMail, FiDownload } from 'react-icons/fi';
 
 const Hero = () => {
   const { personal, socials } = portfolioData;
@@ -38,7 +38,7 @@ const Hero = () => {
             >
               View Portfolio
             </button>
-            
+
             <a
               href="#contact"
               onClick={(e) => {
@@ -48,6 +48,15 @@ const Hero = () => {
               className="px-8 py-4 border-2 border-blue-600 dark:border-blue-400 text-blue-600 dark:text-blue-400 hover:bg-blue-600 dark:hover:bg-blue-400 hover:text-white dark:hover:text-white text-xs font-bold rounded uppercase tracking-widest transition-all duration-300"
             >
               Get In Touch
+            </a>
+
+            <a
+              href="/Sanjay_DS_AI_7YOE_GE.pdf"
+              download="Sanjay_Suthraye_Resume.pdf"
+              className="px-8 py-4 border-2 border-slate-400 dark:border-gray-500 text-slate-600 dark:text-gray-300 hover:bg-slate-600 dark:hover:bg-gray-500 hover:text-white dark:hover:text-white text-xs font-bold rounded uppercase tracking-widest transition-all duration-300 flex items-center gap-2 justify-center"
+            >
+              <FiDownload size={14} />
+              Download Resume
             </a>
           </div>
         </div>
