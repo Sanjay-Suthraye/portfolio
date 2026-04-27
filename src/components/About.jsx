@@ -13,17 +13,18 @@ const About = () => {
         
         <div className="space-y-6 text-center md:text-left">
           <p className="text-slate-600 dark:text-gray-300 leading-loose text-lg">
-            I have spent the last 7 years designing AI/ML solutions for global enterprises like <strong>AstraZeneca</strong> and <strong>Tesco</strong>. 
-            My expertise lies in bridging the gap between complex data and actionable insights using <strong>Python</strong>, <strong>Generative AI</strong>, and <strong>RAG architectures</strong>.
+            Full Stack Data Scientist and AI Engineer with <strong>7 years of expertise</strong> integrating <strong>Statistical Modelling and Generative AI</strong>.
+            Specialist in developing comprehensive intelligence systems, encompassing the design of <strong>Agentic Frameworks (LangGraph, MCP)</strong> and <strong>RAG solutions</strong>,
+            as well as the implementation of robust <strong>Predictive Models (XGBoost, Random Forest)</strong> and <strong>Time-Series Forecasts</strong>.
           </p>
-          
+
           <p className="text-slate-600 dark:text-gray-300 leading-loose text-lg">
-            I specialize in building intelligent agents, predictive models, and deploying scalable ML systems in production environments. 
-            My work has delivered measurable impact including 30% cost reductions, 99% reliability in patient journey analysis, and 40% improvements in analysis efficiency.
+            Demonstrated success at <strong>AstraZeneca</strong> and <strong>Tesco</strong> in transforming traditional analytics into scalable, <strong>containerised microservices (Docker, FastAPI)</strong>
+            that yield quantifiable business results.
           </p>
-          
+
           <p className="text-slate-600 dark:text-gray-300 leading-loose text-lg">
-            I am passionate about leveraging cutting-edge AI technologies to solve real-world problems and am <strong>{personal.status}</strong> for new opportunities worldwide.
+            Looking for new opportunities to drive innovation through AI and data science. Let's connect!
           </p>
         </div>
         

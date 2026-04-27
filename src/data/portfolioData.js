@@ -1,20 +1,21 @@
 export const portfolioData = {
   personal: {
     name: "Sanjay Suthraye",
-    title: "Data Scientist / AI/ML Engineer",
+    title: "Senior Data Scientist | AI & ML Engineer",
     tagline: "Designing AI/ML solutions that drive real-world impact",
-    status: "Available Immediately",
     email: "sanjay.suthraye96@gmail.com",
-    location: "Open to Relocation",
-    bio: "Data scientist with 7 years of experience designing and implementing AI/ML and core data science solutions in enterprise environments. I have a solid grasp of generative AI, LLMs, and RAG systems, and I'm well-versed in NLP, predictive analytics, and machine learning architectures like LSTM, XGBoost, Random Forest, and CatBoost.",
+    phone: "+49 15207556339",
+    location: "Berlin, Germany",
+    bio: "Full Stack Data Scientist and AI Engineer with 7 years of expertise integrating Statistical Modelling and Generative AI. Specialist in developing comprehensive intelligence systems, encompassing the design of Agentic Frameworks (LangGraph, MCP) and RAG solutions, as well as the implementation of robust Predictive Models (XGBoost, Random Forest) and Time-Series Forecasts. Demonstrated success at AstraZeneca and Tesco in transforming traditional analytics into scalable, containerised microservices (Docker, FastAPI) that yield quantifiable business results.",
     image: "/profile.jpg",
-    languages: ["English - Fluent", "German - A1 and A2 (Learning)"],
+    languages: ["English - Fluent", "German - A2 (Enrolled in Intensive Course)"],
   },
-  
+
   socials: {
     github: "https://github.com/Sanjay-Suthraye",
     linkedin: "https://www.linkedin.com/in/sanjaysuthraye/",
     email: "mailto:sanjay.suthraye96@gmail.com",
+    calendly: "https://calendly.com/sanjay-suthraye96/30min",
   },
   
   companies: [
@@ -67,39 +68,49 @@ export const portfolioData = {
     "Machine Learning & AI": [
       "Generative AI",
       "Large Language Models (LLMs)",
+      "Agentic Frameworks (LangGraph, MCP)",
       "Retrieval-Augmented Generation (RAG)",
+      "GraphRAG",
       "Natural Language Processing (NLP)",
-      "XGBoost, Random Forest, Clustering",
-      "Predictive Modeling",
-      "Reinforcement Learning",
+      "XGBoost, Random Forest, CatBoost, LightGBM",
+      "Predictive Modeling & Statistical Analysis",
+      "A/B Testing & Causal Inference",
+      "Time-Series Forecasting (SARIMAX, LSTM, Prophet)",
+      "Weak Supervision (Snorkel)",
+      "Active Learning",
+      "Model Explainability (SHAP, LIME)",
       "Survival Analysis",
-      "Time-Series Forecasting",
-      "Model Explainability (XAI)",
-      "Fairness & Bias Detection"
+      "Clustering (K-Means++, DBSCAN)"
     ],
-    "ML Frameworks": [
+    "Advanced Techniques": [
       "Churn Prediction",
       "Market Mix Modelling",
       "Customer Segmentation",
-      "Enrichment Models"
+      "Pricing Models",
+      "ROI Optimization",
+      "Hypothesis Testing",
+      "Central Composite Design",
+      "Adstock Transforms"
     ],
-    "Libraries": [
+    "Libraries & Frameworks": [
       "PyTorch",
       "TensorFlow",
       "Keras",
       "Scikit-learn",
       "Hugging Face Transformers",
       "LangChain",
+      "FastAPI",
       "XGBoost",
       "LightGBM",
       "spaCy",
       "NLTK",
       "OpenCV",
       "Pandas",
-      "NumPy"
+      "NumPy",
+      "SciPy"
     ],
     "Cloud & MLOps": [
-      "AWS (Lambda, ECS, EKS, S3, API Gateway, Serverless)",
+      "AWS (SageMaker, S3, ECS, Lambda, Step Functions)",
       "GCP Vertex AI",
       "Docker",
       "Kubernetes",
@@ -107,8 +118,16 @@ export const portfolioData = {
       "Apache Airflow",
       "Databricks",
       "CI/CD Pipelines",
-      "Model Deployment",
-      "Model Monitoring"
+      "Model Deployment & Monitoring"
+    ],
+    "Data Platforms": [
+      "Snowflake",
+      "Snowpark",
+      "BigQuery",
+      "Apache Kafka",
+      "Tableau",
+      "Power BI",
+      "MongoDB"
     ],
     "Programming & Tools": [
       "Python",
@@ -116,7 +135,6 @@ export const portfolioData = {
       "SQL",
       "PySpark",
       "Spark",
-      "Snowflake",
       "Git",
       "Shell Scripting",
       "REST APIs",
@@ -124,19 +142,9 @@ export const portfolioData = {
       "Jupyter",
       "VS Code"
     ],
-    "Data Engineering": [
-      "Apache Kafka",
-      "BigQuery",
-      "MongoDB",
-      "Tableau",
-      "Power BI",
-      "Seaborn",
-      "Matplotlib",
-      "Dash"
-    ],
     "Leadership": [
       "Technical Mentorship",
-      "AI/ML Strategy",
+      "Data Science Strategy",
       "Cross-Functional Collaboration",
       "Agile/Scrum",
       "Stakeholder Communication",
@@ -147,20 +155,20 @@ export const portfolioData = {
   experience: [
     {
       company: "ASTRAZENECA",
-      position: "Senior Consultant - AI Engineer",
-      duration: "Sep 2025 - Present",
+      position: "AI Engineering Specialist / Data Scientist",
+      duration: "Sep 2025 - Present / Apr 2023 - Sep 2025",
       location: "Remote",
       description: "Leading AI/ML initiatives and building advanced LLM-based solutions for healthcare and pharmaceutical applications.",
       achievements: [
+        "Designed an Agentic AI Platform (LangGraph, MCP) to automate intricate marketing procedures, decreasing data access latency by 30%",
+        "Engineered and implemented AWS Step Functions for Precision Targeting, deploying more than 5 predictive models (Supervised & Unsupervised) via CI/CD with automated retraining",
+        "Utilised SHAP analysis to determine feature selection and enhance business explainability",
         "Won the Achiever Z Annual Award (Sep'24) for Patient Journey LLM project in the Lead AI and Insights category",
-        "Presented Patient Journey LLM work at the PMSA Conference in New Delhi, receiving top recognition",
-        "Built an AI Marketing Agent platform with 8 modules using Langgraph, deploying via REST API and WebSocket, increasing data access speed by 30%",
-        "Developed multi-stage predictive models for Endometrial Cancer detection, improving diagnostic accuracy by 22%",
-        "Created time series models (LSTM, Sarimax, Prophet) to forecast NBRx trends, cutting operational costs by 30%",
-        "Designed a custom RAG framework for oncology that mapped disease-drug relationships through Knowledge Graphs, achieving 99% reliability in patient journey analysis",
-        "Created a UI for patient journey insights using Neo4j, Open Cypher, and advanced prompt engineering, cutting analysis time by 40%",
-        "Built NLP+RAG pipelines with HuggingFace, LangChain and BERT that improved risk stratification by 20%",
-        "Combined EMR, claims, and diagnostic datasets into a single platform, providing 360° patient views and increasing predictive accuracy by 25%"
+        "Presented Patient Journey LLM technical architecture at the PMSA Conference in New Delhi, receiving top recognition",
+        "Directed Time-Series Forecasting projects by comparing Statistical methods (SARIMAX) with Deep Learning techniques (LSTM)",
+        "Mitigated inadequacy of Ground Truth data utilising Weak Supervision (Snorkel) and Active Learning techniques",
+        "Engineered Snowpark pipelines to provide augmented labels to classifiers, yielding a 10% enhancement in Ground Truth labels",
+        "Developed comprehensive Experimentation Framework (A/B Testing) employing Hypothesis Testing and Central Composite Design"
       ]
     },
     {
@@ -170,11 +178,14 @@ export const portfolioData = {
       location: "Bengaluru, India",
       description: "Led data science initiatives focused on customer analytics, churn prediction, and business optimization.",
       achievements: [
-        "Received Employee of the Month award (Apr'22) through the Spotlight program for data science contributions",
-        "Led a hackathon-winning project (Apr'22) focused on employee health that improved workplace wellbeing",
-        "Developed a customer churn prediction model forecasting attrition 6 weeks ahead for 200K+ households using Random Forest, Logistic Regression, and CatBoost",
-        "Ran A/B tests on churn prevention models that increased household retention by 38% and highlighted critical gaps in shopping patterns",
-        "Built a Product Choice Optimizer using a multi-model approach to maximize ROI, incorporating Adstock variables as marketing impact features"
+        "Developed and containerised Churn Prediction Microservice employing XGBoost and CatBoost, overseeing more than 200k homes",
+        "Validated model effectiveness by rigorous A/B testing, yielding a 38% enhancement in retention",
+        "Engineered scalable Product Choice Optimiser and Market Mix Modelling framework utilising PySpark, managing millions of transactions",
+        "Employed Adstock transforms to model advertising decay and applied multi-objective optimisation to achieve substantial enhancements in return on advertising investment",
+        "Automated High Value Customer (HVC) segmentation processes employing K-Means++ on Hadoop clusters to efficiently categorise customers according to behavioural characteristics",
+        "Implemented machine learning models to identify clients with significant growth potential inside cohorts, enabling dynamic tracking that informed targeted marketing activities",
+        "Led a hackathon-winning project (Apr 2022) focused on employee wellness, improving workplace welfare",
+        "Recognised as Employee of the Month (Apr 2022) within the Spotlight program for contributions to data science"
       ]
     },
     {
