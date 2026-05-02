@@ -6,27 +6,22 @@ const Navigation = ({ darkMode, setDarkMode }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
+    const handleScroll = () => setIsScrolled(window.scrollY > 50);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const navItems = [
-    { name: 'Home', href: '#home' },
-    { name: 'About', href: '#about' },
+    { name: 'Home',      href: '#home' },
+    { name: 'About',     href: '#about' },
     { name: 'Portfolio', href: '#projects' },
-    { name: 'Resume', href: '#experience' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Resume',    href: '#experience' },
+    { name: 'Contact',   href: '#contact' },
   ];
 
   const scrollToSection = (href) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      setIsMobileMenuOpen(false);
-    }
+    document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
+    setIsMobileMenuOpen(false);
   };
 
   return (
@@ -35,7 +30,6 @@ const Navigation = ({ darkMode, setDarkMode }) => {
     }`}>
       <div className="max-w-6xl mx-auto px-6 py-6">
         <div className="flex justify-between items-center">
-          {/* Mobile menu button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="md:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-dark-700 transition-colors"
@@ -43,20 +37,18 @@ const Navigation = ({ darkMode, setDarkMode }) => {
             {isMobileMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
           </button>
 
-          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8 mx-auto">
             {navItems.map((item) => (
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                className="text-xs font-bold tracking-widest uppercase text-slate-500 hover:text-blue-900 dark:hover:text-blue-400 transition-colors"
+                className="text-xs font-bold tracking-widest uppercase text-slate-600 dark:text-slate-300 hover:text-blue-700 dark:hover:text-blue-400 transition-colors"
               >
                 {item.name}
               </button>
             ))}
           </div>
 
-          {/* Dark mode toggle */}
           <button
             onClick={() => setDarkMode(!darkMode)}
             className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-dark-700 transition-colors"
@@ -66,14 +58,13 @@ const Navigation = ({ darkMode, setDarkMode }) => {
           </button>
         </div>
 
-        {/* Mobile menu */}
         {isMobileMenuOpen && (
           <div className="md:hidden mt-4 py-4 space-y-4 animate-fade-in">
             {navItems.map((item) => (
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                className="block w-full text-left px-4 py-2 text-sm font-bold tracking-widest uppercase text-slate-500 hover:text-blue-900 dark:hover:text-blue-400 hover:bg-gray-100 dark:hover:bg-dark-700 rounded-lg transition-colors"
+                className="block w-full text-left px-4 py-2 text-sm font-bold tracking-widest uppercase text-slate-600 dark:text-slate-300 hover:text-blue-700 dark:hover:text-blue-400 hover:bg-gray-100 dark:hover:bg-dark-700 rounded-lg transition-colors"
               >
                 {item.name}
               </button>

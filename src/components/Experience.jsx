@@ -1,13 +1,12 @@
 import { portfolioData } from '../data/portfolioData';
-import { FiBriefcase, FiDownload } from 'react-icons/fi';
+import { FiBriefcase, FiDownload, FiMapPin } from 'react-icons/fi';
 
 const Experience = () => {
   const { experience } = portfolioData;
 
   const handleDownloadResume = () => {
-    // Create a link to download the resume PDF
     const link = document.createElement('a');
-    link.href = '/Sanjay_DS_AI_7YOE_GE.pdf'; // You'll need to add this file to public folder
+    link.href = '/Sanjay_DS_AI_7YOE_GE.pdf';
     link.download = 'Sanjay_Suthraye_Resume.pdf';
     document.body.appendChild(link);
     link.click();
@@ -15,16 +14,15 @@ const Experience = () => {
   };
 
   return (
-    <section id="experience" className="section-container bg-gray-50 dark:bg-dark-900">
-      <div className="max-w-5xl mx-auto">
-        <h3 className="text-3xl font-bold text-slate-800 dark:text-white mb-4 uppercase tracking-widest text-center">
+    <section id="experience" className="section-container bg-white dark:bg-dark-900">
+      <div className="max-w-4xl mx-auto">
+        <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-4 uppercase tracking-widest text-center">
           Work Experience
         </h3>
-        <p className="text-center text-slate-600 dark:text-gray-400 mb-8">
+        <p className="text-center text-slate-500 dark:text-slate-400 mb-8">
           7+ years of building AI/ML solutions in enterprise environments
         </p>
-        
-        {/* Download Resume Button */}
+
         <div className="flex justify-center mb-12">
           <button
             onClick={handleDownloadResume}
@@ -34,59 +32,57 @@ const Experience = () => {
             Download Full Resume
           </button>
         </div>
-        
-        {/* Experience Timeline - Simplified */}
-        <div className="relative">
-          {/* Vertical line */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-blue-200 dark:bg-blue-900"></div>
-          
-          <div className="space-y-12">
-            {experience.map((job, index) => (
-              <div 
-                key={index} 
-                className={`flex items-center gap-8 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'} animate-slide-up`}
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                {/* Content */}
-                <div className="w-5/12">
-                  <div className="card hover:scale-105 transition-transform duration-300">
-                    <div className="flex items-center gap-2 text-blue-600 dark:text-blue-400 font-semibold mb-3">
-                      <FiBriefcase size={18} />
-                      {job.company}
+
+        <div className="space-y-8">
+          {experience.map((job, index) => (
+            <div key={index} className="card animate-slide-up" style={{ animationDelay: `${index * 100}ms` }}>
+              <div className="flex items-start gap-4 mb-4">
+                <div className="p-3 bg-primary-50 dark:bg-primary-900/20 rounded-lg flex-shrink-0">
+                  <FiBriefcase className="text-2xl text-primary-600 dark:text-primary-400" />
+                </div>
+                <div className="flex-1">
+                  <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1">
+                    <div>
+                      <h4 className="text-xl font-bold text-slate-900 dark:text-white">{job.company}</h4>
+                      {job.domain && <p className="text-sm text-slate-500 dark:text-slate-400">{job.domain}</p>}
                     </div>
-                    {job.roles ? (
-                      <div className="space-y-2 mb-2">
-                        {job.roles.map((role, rIndex) => (
-                          <div key={rIndex} className="flex items-start gap-2">
-                            <div className="mt-1.5 w-2 h-2 rounded-full bg-blue-400 dark:bg-blue-500 flex-shrink-0"></div>
-                            <div>
-                              <p className="text-sm font-semibold text-slate-800 dark:text-white leading-tight">{role.position}</p>
-                              <p className="text-xs text-slate-500 dark:text-gray-400">{role.duration}</p>
-                            </div>
-                          </div>
-                        ))}
-                      </div>
-                    ) : (
-                      <h4 className="text-xl font-bold text-slate-800 dark:text-white mb-2">
-                        {job.position}
-                      </h4>
-                    )}
-                    <div className="text-xs text-slate-400 dark:text-gray-500 mt-2 border-t border-gray-100 dark:border-dark-600 pt-2">
-                      {job.duration}
+                    <div className="flex items-center gap-1 text-sm text-slate-500 dark:text-slate-400 flex-shrink-0">
+                      <FiMapPin size={13} />{job.location}
                     </div>
                   </div>
+
+                  <div className="mt-3 space-y-1">
+                    {job.roles ? (
+                      job.roles.map((role, rIndex) => (
+                        <div key={rIndex} className="flex flex-wrap items-center gap-2">
+                          <span className="font-semibold text-primary-600 dark:text-primary-400 text-sm">{role.position}</span>
+                          <span className="text-slate-400 dark:text-slate-500">·</span>
+                          <span className="text-sm text-slate-500 dark:text-slate-400">{role.duration}</span>
+                        </div>
+                      ))
+                    ) : (
+                      <div className="flex flex-wrap items-center gap-2">
+                        <span className="font-semibold text-primary-600 dark:text-primary-400 text-sm">{job.position}</span>
+                        <span className="text-slate-400 dark:text-slate-500">·</span>
+                        <span className="text-sm text-slate-500 dark:text-slate-400">{job.duration}</span>
+                      </div>
+                    )}
+                  </div>
                 </div>
-                
-                {/* Timeline dot */}
-                <div className="w-2/12 flex justify-center">
-                  <div className="w-4 h-4 rounded-full bg-blue-600 dark:bg-blue-400 border-4 border-white dark:border-dark-900 shadow-lg z-10"></div>
-                </div>
-                
-                {/* Spacer */}
-                <div className="w-5/12"></div>
               </div>
-            ))}
-          </div>
+
+              <p className="text-slate-700 dark:text-slate-200 mb-4 leading-relaxed pl-16">{job.description}</p>
+
+              <ul className="space-y-2 pl-16">
+                {job.achievements.map((achievement, aIndex) => (
+                  <li key={aIndex} className="flex items-start gap-3 text-sm text-slate-700 dark:text-slate-200 leading-relaxed">
+                    <div className="mt-1.5 w-1.5 h-1.5 rounded-full bg-primary-600 dark:bg-primary-400 flex-shrink-0"></div>
+                    {achievement}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
       </div>
     </section>

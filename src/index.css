@@ -4,55 +4,49 @@
 
 @theme {
   --font-display: 'Playfair Display', serif;
-  --font-sans: 'IBM Plex Sans', system-ui, sans-serif;
-  --font-mono: 'JetBrains Mono', monospace;
-  
-  --color-primary-50: #eff6ff;
-  --color-primary-100: #dbeafe;
-  --color-primary-200: #bfdbfe;
-  --color-primary-300: #93c5fd;
-  --color-primary-400: #60a5fa;
-  --color-primary-500: #3b82f6;
-  --color-primary-600: #2563eb;
-  --color-primary-700: #1d4ed8;
-  --color-primary-800: #1e40af;
-  --color-primary-900: #1e3a8a;
-  
-  --color-dark-50: #f8fafc;
-  --color-dark-100: #f1f5f9;
-  --color-dark-200: #e2e8f0;
-  --color-dark-300: #cbd5e1;
-  --color-dark-400: #94a3b8;
-  --color-dark-500: #64748b;
-  --color-dark-600: #475569;
-  --color-dark-700: #334155;
-  --color-dark-800: #1e293b;
-  --color-dark-900: #0f172a;
-  
-  --animate-fade-in: fadeIn 0.6s ease-out;
-  --animate-slide-up: slideUp 0.6s ease-out;
+  --font-sans:    'IBM Plex Sans', system-ui, sans-serif;
+  --font-mono:    'JetBrains Mono', monospace;
+
+  --color-primary-50:  #f0f5ff;
+  --color-primary-100: #e0ebff;
+  --color-primary-200: #c7d9ff;
+  --color-primary-300: #a3c0ff;
+  --color-primary-400: #7a9bff;
+  --color-primary-500: #5575ff;
+  --color-primary-600: #3d52f5;
+  --color-primary-700: #2e3dd8;
+  --color-primary-800: #2832ae;
+  --color-primary-900: #273089;
+
+  --color-dark-50:  #f8f9fa;
+  --color-dark-100: #e9ecef;
+  --color-dark-200: #dee2e6;
+  --color-dark-300: #ced4da;
+  --color-dark-400: #adb5bd;
+  --color-dark-500: #6c757d;
+  --color-dark-600: #495057;
+  --color-dark-700: #343a40;
+  --color-dark-800: #212529;
+  --color-dark-900: #0a0c0e;
+
+  --animate-fade-in:        fadeIn 0.6s ease-out;
+  --animate-slide-up:       slideUp 0.6s ease-out;
   --animate-slide-in-right: slideInRight 0.6s ease-out;
 }
 
-@keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
-}
-
-@keyframes slideUp {
-  0% { transform: translateY(20px); opacity: 0; }
-  100% { transform: translateY(0); opacity: 1; }
-}
-
-@keyframes slideInRight {
-  0% { transform: translateX(20px); opacity: 0; }
-  100% { transform: translateX(0); opacity: 1; }
-}
+@keyframes fadeIn       { 0% { opacity: 0; } 100% { opacity: 1; } }
+@keyframes slideUp      { 0% { transform: translateY(20px); opacity: 0; } 100% { transform: translateY(0); opacity: 1; } }
+@keyframes slideInRight { 0% { transform: translateX(20px); opacity: 0; } 100% { transform: translateX(0); opacity: 1; } }
 
 body {
   font-family: var(--font-sans);
+  color: #334155;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+:is(.dark body) {
+  color: #e2e8f0;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -68,17 +62,20 @@ h1, h2, h3, h4, h5, h6 {
 .card {
   background-color: white;
   border-radius: 0.75rem;
-  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 0.06);
   padding: 1.5rem;
   transition: all 0.3s;
 }
 
 .card:hover {
-  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  box-shadow: 0 4px 12px rgb(0 0 0 / 0.08);
+  border-color: #cbd5e1;
 }
 
 :is(.dark .card) {
-  background-color: var(--color-dark-800);
+  background-color: #212529;
+  border-color: #343a40;
 }
 
 .btn-primary {
@@ -128,39 +125,14 @@ h1, h2, h3, h4, h5, h6 {
   color: transparent;
 }
 
-.animate-delay-200 {
-  animation-delay: 200ms;
-}
+.animate-delay-200 { animation-delay: 200ms; }
+.animate-delay-400 { animation-delay: 400ms; }
+.animate-delay-600 { animation-delay: 600ms; }
 
-.animate-delay-400 {
-  animation-delay: 400ms;
-}
+html { scroll-behavior: smooth; }
 
-.animate-delay-600 {
-  animation-delay: 600ms;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background-color: #f3f4f6;
-}
-
-:is(.dark ::-webkit-scrollbar-track) {
-  background-color: var(--color-dark-800);
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: var(--color-primary-400);
-  border-radius: 9999px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background-color: var(--color-primary-600);
-}
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background-color: #f3f4f6; }
+:is(.dark ::-webkit-scrollbar-track) { background-color: #212529; }
+::-webkit-scrollbar-thumb { background-color: var(--color-primary-400); border-radius: 9999px; }
+::-webkit-scrollbar-thumb:hover { background-color: var(--color-primary-600); }

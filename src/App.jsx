@@ -25,21 +25,21 @@ function App() {
   return (
     <div className="min-h-screen bg-white dark:bg-dark-900 transition-colors duration-300">
       <Navigation darkMode={darkMode} setDarkMode={setDarkMode} />
-      
+
       <main>
         <Hero />
         <About />
-        <Collaborations />
         <Experience />
         <Projects />
         <Skills />
         <Education />
         <Awards />
+        <Collaborations />
         <Contact />
       </main>
-      
+
       <footer className="bg-white dark:bg-dark-800 border-t border-gray-200 dark:border-dark-700 py-8">
-        <div className="max-w-6xl mx-auto px-6 text-center text-gray-600 dark:text-gray-400">
+        <div className="max-w-6xl mx-auto px-6 text-center text-slate-600 dark:text-slate-400">
           <p>© 2026 Sanjay Suthraye. Built with React + Vite</p>
         </div>
       </footer>
