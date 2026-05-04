@@ -71,14 +71,7 @@ export const portfolioData = {
       organization: "Christ University, Bangalore",
       duration: "Apr 2025 - Jan 2026 · 10 mos",
       cause: "Education",
-      description: "Recognized as Industry Mentor under 'Inheritance-2025' for M.Sc. (Data Science) 2024–'26 batch students aspiring to become Data Scientists."
-    },
-    {
-      role: "Volunteer",
-      organization: "Make A Difference",
-      duration: "Jan 2017 - Jun 2017 · 6 mos",
-      cause: "Children",
-      description: "Volunteered with Make-A-Difference India, focusing on enriching lives and supporting children's development."
+      description: "Mentoring M.Sc. Data Science students at Christ University — guiding industry-readiness, career navigation, and applied AI/ML project work."
     },
     {
       role: "Guest Speaker",
@@ -86,13 +79,6 @@ export const portfolioData = {
       duration: "",
       cause: "Education",
       description: "Delivered guest lectures on data science and AI topics for undergraduate and postgraduate students."
-    },
-    {
-      role: "Event Coordinator",
-      organization: "AMC Engineering College",
-      duration: "Mar 2017 - Apr 2017 · 2 mos",
-      cause: "Arts and Culture",
-      description: "Coordinated college events encompassing arts and cultural programs."
     }
   ],
 
@@ -193,13 +179,9 @@ export const portfolioData = {
       ],
       description: "Leading AI/ML and GenAI engineering initiatives across the Oncology Business Unit, building scalable intelligence systems for pharmaceutical applications.",
       achievements: [
-        "Received the Achiever Z Annual Award (Sep 2024) for spearheading the Patient Journey Analytics project in the Lead AI and Insights category",
-        "Presented the Patient Journey LLM system architecture at the PMSA Conference in New Delhi, receiving top recognition",
-        "Designed an Agentic AI Platform (LangGraph, MCP) to automate marketing workflows, reducing data access latency by 30%",
-        "Engineered AWS Step Functions for Precision Targeting, deploying 5+ predictive models via CI/CD with automated retraining; used SHAP for feature selection and business explainability",
-        "Directed Time-Series Forecasting projects comparing SARIMAX with LSTM across NBRx trend forecasting, cutting operational costs by 30%",
-        "Mitigated ground truth scarcity using Weak Supervision (Snorkel) and Active Learning; built Snowpark pipelines delivering a 10% improvement in dependent label quality",
-        "Built a comprehensive A/B Testing and Experimentation Framework using Hypothesis Testing and Central Composite Design to empirically assess model effects"
+        "Built Agentic AI Platform reducing data access latency by 30%",
+        "Engineered AWS Step Functions for Precision Targeting with automated retraining pipelines",
+        "Directed Time-Series Forecasting projects cutting operational costs by 30%"
       ]
     },
     {
@@ -209,11 +191,9 @@ export const portfolioData = {
       location: "Bengaluru, India",
       description: "Led data science initiatives focused on customer analytics, churn prediction, and business optimization.",
       achievements: [
-        "Received Employee of the Month award (Apr'22) through the Spotlight program for data science contributions",
-        "Led a hackathon-winning project (Apr'22) focused on employee health that improved workplace wellbeing",
-        "Developed a customer churn prediction model forecasting attrition 6 weeks ahead for 200K+ households using Random Forest, Logistic Regression, and CatBoost",
-        "Ran A/B tests on churn prevention models that increased household retention by 38% and highlighted critical gaps in shopping patterns",
-        "Built a Product Choice Optimizer using a multi-model approach to maximize ROI, incorporating Adstock variables as marketing impact features"
+        "Developed churn prediction model for 200K+ households using ensemble methods",
+        "Increased household retention by 38% through A/B testing on prevention models",
+        "Built Product Choice Optimizer maximizing ROI with marketing impact features"
       ]
     },
     {
@@ -223,8 +203,8 @@ export const portfolioData = {
       location: "Remote",
       description: "Delivered data-driven insights and ML solutions for business optimization and dealer performance improvement.",
       achievements: [
-        "Created an ML model with Levenshtein Algorithm to find similar products, using the Pareto principle to focus on the top 20% of recommendations",
-        "Built the Dealer Health Index from scratch, handling everything from data collection to visualization in Tableau and Excel",
+        "Created ML model for product similarity using Levenshtein Algorithm",
+        "Built Dealer Health Index from scratch with Tableau visualization",
         "Improved metrics for 62% of underperforming dealers through data-driven recommendations"
       ]
     },
@@ -239,10 +219,8 @@ export const portfolioData = {
       ],
       description: "Applied ML and data analysis to optimize helpdesk operations and customer service metrics.",
       achievements: [
-        "Designed an ML model using Named Entity Recognition to analyze customer reviews and identify primary sentiment drivers",
-        "Optimized team traffic workflows with regression analysis, reducing average handling time by 15%",
-        "Examined call flow data to identify trends that improved first-call resolution rates",
-        "Managed SQL/MS SQL databases and maintained a centralized knowledge repository that improved information dissemination"
+        "Designed ML model using Named Entity Recognition for customer sentiment analysis",
+        "Optimised team workflows reducing average handling time by 15%"
       ]
     }
   ],

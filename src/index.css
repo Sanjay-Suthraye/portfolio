@@ -45,10 +45,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-:is(.dark body) {
-  color: #e2e8f0;
-}
-
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-display);
 }
@@ -71,11 +67,6 @@ h1, h2, h3, h4, h5, h6 {
 .card:hover {
   box-shadow: 0 4px 12px rgb(0 0 0 / 0.08);
   border-color: #cbd5e1;
-}
-
-:is(.dark .card) {
-  background-color: #212529;
-  border-color: #343a40;
 }
 
 .btn-primary {
@@ -108,16 +99,6 @@ h1, h2, h3, h4, h5, h6 {
   color: white;
 }
 
-:is(.dark .btn-secondary) {
-  border-color: var(--color-primary-400);
-  color: var(--color-primary-400);
-}
-
-:is(.dark .btn-secondary:hover) {
-  background-color: var(--color-primary-400);
-  color: var(--color-dark-900);
-}
-
 .text-gradient {
   background: linear-gradient(to right, var(--color-primary-600), var(--color-primary-400));
   -webkit-background-clip: text;
@@ -132,7 +113,6 @@ h1, h2, h3, h4, h5, h6 {
 html { scroll-behavior: smooth; }
 
 ::-webkit-scrollbar { width: 10px; }
-::-webkit-scrollbar-track { background-color: #f3f4f6; }
-:is(.dark ::-webkit-scrollbar-track) { background-color: #212529; }
+::-webkit-scrollbar-track { background-color: #f8fafc; }
 ::-webkit-scrollbar-thumb { background-color: var(--color-primary-400); border-radius: 9999px; }
 ::-webkit-scrollbar-thumb:hover { background-color: var(--color-primary-600); }

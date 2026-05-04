@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react';
 import Hero from './components/Hero';
 import About from './components/About';
 import Collaborations from './components/Collaborations';
@@ -12,19 +11,9 @@ import Navigation from './components/Navigation';
 import './index.css';
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false);
-
-  useEffect(() => {
-    if (darkMode) {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
-  }, [darkMode]);
-
   return (
-    <div className="min-h-screen bg-white dark:bg-dark-900 transition-colors duration-300">
-      <Navigation darkMode={darkMode} setDarkMode={setDarkMode} />
+    <div className="min-h-screen bg-white">
+      <Navigation />
 
       <main>
         <Hero />
@@ -32,14 +21,14 @@ function App() {
         <Experience />
         <Projects />
         <Skills />
-        <Education />
         <Awards />
+        <Education />
         <Collaborations />
         <Contact />
       </main>
 
-      <footer className="bg-white dark:bg-dark-800 border-t border-gray-200 dark:border-dark-700 py-8">
-        <div className="max-w-6xl mx-auto px-6 text-center text-slate-600 dark:text-slate-400">
+      <footer className="bg-white border-t border-slate-200 py-8">
+        <div className="max-w-6xl mx-auto px-6 text-center text-slate-500">
           <p>© 2026 Sanjay Suthraye. Built with React + Vite</p>
         </div>
       </footer>
