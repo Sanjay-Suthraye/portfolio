@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,700&family=IBM+Plex+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
 
 @import "tailwindcss";
 
@@ -7,27 +7,22 @@
   --font-sans:    'IBM Plex Sans', system-ui, sans-serif;
   --font-mono:    'JetBrains Mono', monospace;
 
-  --color-primary-50:  #f0f5ff;
-  --color-primary-100: #e0ebff;
-  --color-primary-200: #c7d9ff;
-  --color-primary-300: #a3c0ff;
-  --color-primary-400: #7a9bff;
-  --color-primary-500: #5575ff;
-  --color-primary-600: #3d52f5;
-  --color-primary-700: #2e3dd8;
-  --color-primary-800: #2832ae;
-  --color-primary-900: #273089;
+  --color-primary-50:  #eef0ff;
+  --color-primary-100: #dde2ff;
+  --color-primary-200: #c0c8ff;
+  --color-primary-300: #9aa5ff;
+  --color-primary-400: #7a8fff;
+  --color-primary-500: #5b7bfc;
+  --color-primary-600: #4a5cf0;
+  --color-primary-700: #3a47d8;
+  --color-primary-800: #3039ae;
+  --color-primary-900: #2c3489;
 
-  --color-dark-50:  #f8f9fa;
-  --color-dark-100: #e9ecef;
-  --color-dark-200: #dee2e6;
-  --color-dark-300: #ced4da;
-  --color-dark-400: #adb5bd;
-  --color-dark-500: #6c757d;
-  --color-dark-600: #495057;
-  --color-dark-700: #343a40;
-  --color-dark-800: #212529;
-  --color-dark-900: #0a0c0e;
+  --color-surface-900: #0b0d18;
+  --color-surface-800: #0f1220;
+  --color-surface-700: #141828;
+  --color-surface-600: #1a2032;
+  --color-surface-500: #1e2a40;
 
   --animate-fade-in:        fadeIn 0.6s ease-out;
   --animate-slide-up:       slideUp 0.6s ease-out;
@@ -40,7 +35,8 @@
 
 body {
   font-family: var(--font-sans);
-  color: #334155;
+  background-color: var(--color-surface-900);
+  color: #cbd5e1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -50,69 +46,41 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .section-container {
-  max-width: 72rem;
-  margin: 0 auto;
-  padding: 4rem 1.5rem;
+  padding: 6rem 2rem;
 }
 
 .card {
-  background-color: white;
+  background-color: var(--color-surface-700);
   border-radius: 0.75rem;
-  border: 1px solid #e2e8f0;
-  box-shadow: 0 1px 3px rgb(0 0 0 / 0.06);
+  border: 1px solid var(--color-surface-500);
   padding: 1.5rem;
   transition: all 0.3s;
 }
 
 .card:hover {
-  box-shadow: 0 4px 12px rgb(0 0 0 / 0.08);
-  border-color: #cbd5e1;
+  border-color: #334155;
+  box-shadow: 0 4px 24px rgb(0 0 0 / 0.3);
 }
 
-.btn-primary {
-  padding: 0.75rem 1.5rem;
-  background-color: var(--color-primary-600);
-  color: white;
-  border-radius: 0.5rem;
-  font-weight: 500;
-  transition: all 0.3s;
+.section-label {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
 }
 
-.btn-primary:hover {
-  background-color: var(--color-primary-700);
-  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
-  transform: translateY(-2px);
+.section-label::before {
+  content: '';
+  display: block;
+  width: 2rem;
+  height: 1px;
+  background-color: var(--color-primary-500);
+  flex-shrink: 0;
 }
-
-.btn-secondary {
-  padding: 0.75rem 1.5rem;
-  background-color: transparent;
-  border: 2px solid var(--color-primary-600);
-  color: var(--color-primary-600);
-  border-radius: 0.5rem;
-  font-weight: 500;
-  transition: all 0.3s;
-}
-
-.btn-secondary:hover {
-  background-color: var(--color-primary-600);
-  color: white;
-}
-
-.text-gradient {
-  background: linear-gradient(to right, var(--color-primary-600), var(--color-primary-400));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
-.animate-delay-200 { animation-delay: 200ms; }
-.animate-delay-400 { animation-delay: 400ms; }
-.animate-delay-600 { animation-delay: 600ms; }
 
 html { scroll-behavior: smooth; }
 
-::-webkit-scrollbar { width: 10px; }
-::-webkit-scrollbar-track { background-color: #f8fafc; }
-::-webkit-scrollbar-thumb { background-color: var(--color-primary-400); border-radius: 9999px; }
-::-webkit-scrollbar-thumb:hover { background-color: var(--color-primary-600); }
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background-color: var(--color-surface-900); }
+::-webkit-scrollbar-thumb { background-color: var(--color-surface-500); border-radius: 9999px; }
+::-webkit-scrollbar-thumb:hover { background-color: #334155; }

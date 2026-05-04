@@ -5,74 +5,71 @@ const Contact = () => {
   const { personal, socials } = portfolioData;
 
   return (
-    <section id="contact" className="section-container bg-white">
-      <div className="max-w-5xl mx-auto">
-        <h3 className="text-3xl font-bold text-slate-900 mb-4 uppercase tracking-widest text-center">
-          Get In Touch
-        </h3>
-        <p className="text-center text-slate-500 mb-12">
-          Let's schedule a time to connect and discuss opportunities
+    <section id="contact" className="section-container border-t" style={{ borderColor: 'var(--color-surface-500)', backgroundColor: 'var(--color-surface-800)' }}>
+      <div className="max-w-7xl mx-auto">
+        <div className="section-label">
+          <span className="font-mono text-xs tracking-widest uppercase text-primary-400">Contact</span>
+        </div>
+        <h3 className="text-4xl font-display font-bold text-white mb-4">Let's Talk</h3>
+        <p className="text-slate-500 font-mono text-sm mb-14">
+          Available for new opportunities — let's find a time to connect.
         </p>
 
-        <div className="grid md:grid-cols-2 gap-12 max-w-3xl mx-auto">
-          {/* Left */}
-          <div className="space-y-8 animate-slide-up">
-            <div>
-              <h4 className="text-xl font-bold text-slate-900 mb-6">Contact Information</h4>
-              <div className="space-y-4">
-                <div className="flex items-center gap-4">
-                  <div className="p-3 bg-primary-50 rounded-lg">
-                    <FiMail className="text-xl text-primary-600" />
-                  </div>
-                  <div>
-                    <p className="text-sm text-slate-500">Email</p>
-                    <a href={`mailto:${personal.email}`} className="text-slate-700 hover:text-primary-600 transition-colors">{personal.email}</a>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-4">
-                  <div className="p-3 bg-primary-50 rounded-lg">
-                    <FiPhone className="text-xl text-primary-600" />
-                  </div>
-                  <div>
-                    <p className="text-sm text-slate-500">Phone</p>
-                    <a href={`tel:${personal.phone}`} className="text-slate-700 hover:text-primary-600 transition-colors">{personal.phone}</a>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-4">
-                  <div className="p-3 bg-primary-50 rounded-lg">
-                    <FiMapPin className="text-xl text-primary-600" />
-                  </div>
-                  <div>
-                    <p className="text-sm text-slate-500">Location</p>
-                    <p className="text-slate-700">{personal.location}</p>
-                  </div>
-                </div>
+        <div className="grid md:grid-cols-2 gap-16 max-w-3xl">
+          {/* Left - info */}
+          <div className="space-y-6">
+            <div className="flex items-center gap-4">
+              <div className="w-10 h-10 flex items-center justify-center border rounded text-slate-600" style={{ borderColor: 'var(--color-surface-500)' }}>
+                <FiMail size={16} />
+              </div>
+              <div>
+                <p className="font-mono text-xs text-slate-600 uppercase tracking-widest mb-0.5">Email</p>
+                <a href={`mailto:${personal.email}`} className="text-slate-300 hover:text-white text-sm transition-colors">{personal.email}</a>
               </div>
             </div>
 
-            <div>
-              <h4 className="text-lg font-bold text-slate-900 mb-4">Connect With Me</h4>
-              <div className="flex gap-4">
-                <a href={socials.github} target="_blank" rel="noopener noreferrer"
-                  className="p-4 bg-slate-100 rounded-lg hover:bg-primary-50 transition-colors group" aria-label="GitHub">
-                  <FiGithub className="text-2xl text-slate-600 group-hover:text-primary-600 transition-colors" />
-                </a>
-                <a href={socials.linkedin} target="_blank" rel="noopener noreferrer"
-                  className="p-4 bg-slate-100 rounded-lg hover:bg-primary-50 transition-colors group" aria-label="LinkedIn">
-                  <FiLinkedin className="text-2xl text-slate-600 group-hover:text-primary-600 transition-colors" />
-                </a>
+            <div className="flex items-center gap-4">
+              <div className="w-10 h-10 flex items-center justify-center border rounded text-slate-600" style={{ borderColor: 'var(--color-surface-500)' }}>
+                <FiPhone size={16} />
               </div>
+              <div>
+                <p className="font-mono text-xs text-slate-600 uppercase tracking-widest mb-0.5">Phone</p>
+                <a href={`tel:${personal.phone}`} className="text-slate-300 hover:text-white text-sm transition-colors">{personal.phone}</a>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-4">
+              <div className="w-10 h-10 flex items-center justify-center border rounded text-slate-600" style={{ borderColor: 'var(--color-surface-500)' }}>
+                <FiMapPin size={16} />
+              </div>
+              <div>
+                <p className="font-mono text-xs text-slate-600 uppercase tracking-widest mb-0.5">Location</p>
+                <p className="text-slate-300 text-sm">{personal.location}</p>
+              </div>
+            </div>
+
+            <div className="flex gap-3 pt-4">
+              <a href={socials.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub"
+                className="w-10 h-10 flex items-center justify-center border rounded text-slate-600 hover:border-slate-500 hover:text-white transition-colors" style={{ borderColor: 'var(--color-surface-500)' }}>
+                <FiGithub size={16} />
+              </a>
+              <a href={socials.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"
+                className="w-10 h-10 flex items-center justify-center border rounded text-slate-600 hover:border-slate-500 hover:text-white transition-colors" style={{ borderColor: 'var(--color-surface-500)' }}>
+                <FiLinkedin size={16} />
+              </a>
             </div>
           </div>
 
-          {/* Right */}
-          <div className="animate-slide-up flex flex-col justify-center items-center gap-6">
-            <h4 className="text-xl font-bold text-slate-900 self-start">Schedule a Meeting</h4>
-            <a href={socials.calendly} target="_blank" rel="noopener noreferrer"
-              className="w-full flex items-center justify-center gap-2 px-8 py-4 bg-primary-600 hover:bg-primary-700 text-white font-bold rounded-lg shadow-lg uppercase tracking-widest transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
-              <FiCalendar />
+          {/* Right - Calendly */}
+          <div className="flex flex-col justify-center gap-4">
+            <p className="font-mono text-xs text-slate-600 uppercase tracking-widest">Schedule a Meeting</p>
+            <a
+              href={socials.calendly}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-3 px-8 py-5 border border-primary-700 text-primary-400 font-bold text-xs tracking-widest uppercase rounded hover:bg-primary-600 hover:text-white hover:border-primary-600 transition-all duration-300"
+            >
+              <FiCalendar size={16} />
               Book on Calendly
             </a>
           </div>

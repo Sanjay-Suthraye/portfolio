@@ -5,28 +5,25 @@ const Awards = () => {
   const { awards } = portfolioData;
 
   return (
-    <section id="awards" className="section-container bg-slate-50">
-      <div className="max-w-5xl mx-auto">
-        <h3 className="text-3xl font-bold text-slate-900 mb-4 uppercase tracking-widest text-center">
-          Awards & Recognition
-        </h3>
-        <p className="text-center text-slate-500 mb-16">
-          Recognition for excellence in AI/ML and Data Science
-        </p>
+    <section id="awards" className="section-container border-t" style={{ borderColor: 'var(--color-surface-500)' }}>
+      <div className="max-w-7xl mx-auto">
+        <div className="section-label">
+          <span className="font-mono text-xs tracking-widest uppercase text-primary-400">Recognition</span>
+        </div>
+        <h3 className="text-4xl font-display font-bold text-white mb-14">Awards</h3>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-6">
           {awards.map((award, index) => (
-            <div key={index} className="card hover:scale-[1.02] transition-transform duration-300 animate-slide-up"
-              style={{ animationDelay: `${index * 100}ms` }}>
+            <div key={index} className="card animate-slide-up hover:scale-[1.02] transition-transform duration-300" style={{ animationDelay: `${index * 80}ms` }}>
               <div className="flex items-start gap-4">
-                <div className="p-3 bg-yellow-50 rounded-lg">
-                  <FiAward className="text-2xl text-yellow-600" />
+                <div className="p-2.5 rounded border mt-0.5" style={{ borderColor: 'var(--color-surface-500)' }}>
+                  <FiAward className="text-yellow-500" size={18} />
                 </div>
-                <div className="flex-1">
-                  <h4 className="text-xl font-bold text-slate-900 mb-2">{award.title}</h4>
-                  <p className="text-primary-600 font-medium mb-2">{award.issuer}</p>
-                  <p className="text-sm text-slate-500 mb-3">{award.date}</p>
-                  <p className="text-slate-600">{award.description}</p>
+                <div>
+                  <h4 className="font-display font-bold text-white text-lg mb-1">{award.title}</h4>
+                  <p className="font-mono text-xs text-primary-400 mb-1">{award.issuer}</p>
+                  <p className="font-mono text-xs text-slate-600 mb-3">{award.date}</p>
+                  <p className="text-sm text-slate-400 leading-relaxed">{award.description}</p>
                 </div>
               </div>
             </div>

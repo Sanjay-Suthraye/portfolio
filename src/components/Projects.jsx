@@ -5,46 +5,49 @@ const Projects = () => {
   const { projects } = portfolioData;
 
   return (
-    <section id="projects" className="section-container bg-slate-50">
-      <div className="max-w-6xl mx-auto">
-        <h3 className="text-3xl font-bold text-slate-900 mb-4 uppercase tracking-widest text-center">
-          Featured Projects
-        </h3>
-        <p className="text-center text-slate-500 mb-16">
-          Showcasing my work in AI/ML, LLMs, and Data Science
+    <section id="projects" className="section-container border-t" style={{ borderColor: 'var(--color-surface-500)' }}>
+      <div className="max-w-7xl mx-auto">
+        <div className="section-label">
+          <span className="font-mono text-xs tracking-widest uppercase text-primary-400">Portfolio</span>
+        </div>
+        <h3 className="text-4xl font-display font-bold text-white mb-4">Featured Projects</h3>
+        <p className="font-mono text-sm text-slate-600 mb-14 uppercase tracking-widest">
+          AI/ML · LLMs · Data Science
         </p>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => (
             <div
               key={index}
-              className="card group hover:scale-105 transition-all duration-300 animate-slide-up flex flex-col"
-              style={{ animationDelay: `${index * 100}ms` }}
+              className="card group flex flex-col animate-slide-up"
+              style={{ animationDelay: `${index * 80}ms` }}
             >
-              <div className="flex items-start justify-between mb-4">
-                <div className="p-3 bg-primary-50 rounded-lg">
-                  <FiGithub className="text-2xl text-primary-600" />
-                </div>
-                <a href={project.github} target="_blank" rel="noopener noreferrer"
-                  className="p-2 hover:bg-gray-100 rounded-lg transition-colors" aria-label="View on GitHub">
-                  <FiExternalLink className="text-xl text-slate-500 hover:text-primary-600" />
+              <div className="flex items-start justify-between mb-5">
+                <FiGithub className="text-slate-600 group-hover:text-primary-400 transition-colors" size={20} />
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="View on GitHub"
+                  className="text-slate-700 hover:text-primary-400 transition-colors"
+                >
+                  <FiExternalLink size={16} />
                 </a>
               </div>
 
-              <h4 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-primary-600 transition-colors">
+              <h4 className="font-display font-bold text-white text-lg mb-3 group-hover:text-primary-400 transition-colors">
                 {project.title}
               </h4>
 
               <div className="overflow-hidden max-h-0 group-hover:max-h-40 transition-all duration-300 ease-in-out">
-                <p className="text-slate-700 mb-3 text-sm leading-relaxed">
+                <p className="text-slate-500 text-sm leading-relaxed mb-3">
                   {project.description}
                 </p>
               </div>
 
-              <div className="flex flex-wrap gap-2 mt-auto pt-2">
+              <div className="flex flex-wrap gap-2 mt-auto pt-3">
                 {project.technologies.map((tech, idx) => (
-                  <span key={idx}
-                    className="px-3 py-1 bg-gray-100 text-slate-700 rounded-full text-xs font-medium">
+                  <span key={idx} className="px-2.5 py-1 text-xs font-mono text-slate-500 rounded border" style={{ borderColor: 'var(--color-surface-500)' }}>
                     {tech}
                   </span>
                 ))}
@@ -54,10 +57,14 @@ const Projects = () => {
         </div>
 
         <div className="mt-12 text-center">
-          <a href={portfolioData.socials.github} target="_blank" rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-primary-600 hover:bg-primary-700 text-white text-xs font-bold rounded shadow-lg uppercase tracking-widest transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
-            <FiGithub size={20} />
-            View All Projects on GitHub
+          <a
+            href={portfolioData.socials.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-8 py-4 border border-slate-700 text-slate-400 text-xs font-bold rounded uppercase tracking-widest hover:border-slate-500 hover:text-white transition-colors"
+          >
+            <FiGithub size={16} />
+            View All on GitHub
           </a>
         </div>
       </div>

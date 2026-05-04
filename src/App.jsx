@@ -12,7 +12,7 @@ import './index.css';
 
 function App() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen" style={{ backgroundColor: 'var(--color-surface-900)' }}>
       <Navigation />
 
       <main>
@@ -27,9 +27,9 @@ function App() {
         <Contact />
       </main>
 
-      <footer className="bg-white border-t border-slate-200 py-8">
-        <div className="max-w-6xl mx-auto px-6 text-center text-slate-500">
-          <p>© 2026 Sanjay Suthraye. Built with React + Vite</p>
+      <footer className="border-t py-8" style={{ borderColor: 'var(--color-surface-500)' }}>
+        <div className="max-w-7xl mx-auto px-8 text-center text-slate-600 text-sm font-mono tracking-widest">
+          <p>© 2026 Sanjay Suthraye</p>
         </div>
       </footer>
     </div>

@@ -1,77 +1,58 @@
 import { portfolioData } from '../data/portfolioData';
-import { FiBriefcase, FiDownload } from 'react-icons/fi';
+import { FiDownload } from 'react-icons/fi';
 
 const Experience = () => {
   const { experience } = portfolioData;
 
-  const handleDownloadResume = () => {
-    const link = document.createElement('a');
-    link.href = '/Sanjay_DS_AI_7YOE_GE.pdf';
-    link.download = 'Sanjay_Suthraye_Resume.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
-
   return (
-    <section id="experience" className="section-container bg-white">
-      <div className="max-w-4xl mx-auto">
-        <h3 className="text-3xl font-bold text-slate-900 mb-4 uppercase tracking-widest text-center">
-          Work Experience
-        </h3>
-        <p className="text-center text-slate-500 mb-8">
-          7+ years of building AI/ML solutions in enterprise environments
-        </p>
-
-        <div className="flex justify-center mb-12">
-          <button
-            onClick={handleDownloadResume}
-            className="inline-flex items-center gap-3 px-8 py-4 bg-primary-600 hover:bg-primary-700 text-white text-sm font-bold rounded-lg shadow-lg uppercase tracking-widest transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+    <section id="experience" className="section-container border-t" style={{ borderColor: 'var(--color-surface-500)', backgroundColor: 'var(--color-surface-800)' }}>
+      <div className="max-w-7xl mx-auto">
+        <div className="flex items-start justify-between mb-12 flex-wrap gap-6">
+          <div>
+            <div className="section-label">
+              <span className="font-mono text-xs tracking-widest uppercase text-primary-400">Experience</span>
+            </div>
+            <h3 className="text-4xl font-display font-bold text-white">Work History</h3>
+          </div>
+          <a
+            href="/Sanjay_DS_AI_7YOE_GE.pdf"
+            download="Sanjay_Suthraye_Resume.pdf"
+            className="inline-flex items-center gap-2 px-6 py-3 border border-primary-600 text-primary-400 text-xs font-bold tracking-widest uppercase rounded hover:bg-primary-600 hover:text-white transition-colors self-end"
           >
-            <FiDownload size={20} />
-            Download Full Resume
-          </button>
+            <FiDownload size={14} />
+            Download Resume
+          </a>
         </div>
 
-        <div className="space-y-8">
+        <div className="space-y-6">
           {experience.map((job, index) => (
-            <div key={index} className="card animate-slide-up" style={{ animationDelay: `${index * 100}ms` }}>
-              <div className="flex items-start gap-4 mb-4">
-                <div className="p-3 bg-primary-50 rounded-lg flex-shrink-0">
-                  <FiBriefcase className="text-2xl text-primary-600" />
+            <div key={index} className="card animate-slide-up" style={{ animationDelay: `${index * 80}ms` }}>
+              <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 mb-5">
+                <div>
+                  <h4 className="text-xl font-display font-bold text-white mb-1">{job.company}</h4>
+                  {job.domain && <p className="font-mono text-xs text-slate-600 uppercase tracking-widest">{job.domain}</p>}
                 </div>
-                <div className="flex-1">
-                  <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1">
-                    <div>
-                      <h4 className="text-xl font-bold text-slate-900">{job.company}</h4>
-                      {job.domain && <p className="text-sm text-slate-500">{job.domain}</p>}
-                    </div>
-                  </div>
-
-                  <div className="mt-3 space-y-1">
-                    {job.roles ? (
-                      job.roles.map((role, rIndex) => (
-                        <div key={rIndex} className="flex flex-wrap items-center gap-2">
-                          <span className="font-semibold text-primary-600 text-sm">{role.position}</span>
-                          <span className="text-slate-300">·</span>
-                          <span className="text-sm text-slate-500">{role.duration}</span>
-                        </div>
-                      ))
-                    ) : (
-                      <div className="flex flex-wrap items-center gap-2">
-                        <span className="font-semibold text-primary-600 text-sm">{job.position}</span>
-                        <span className="text-slate-300">·</span>
-                        <span className="text-sm text-slate-500">{job.duration}</span>
+                <div className="space-y-1 sm:text-right">
+                  {job.roles ? (
+                    job.roles.map((role, rIdx) => (
+                      <div key={rIdx}>
+                        <span className="font-mono text-xs text-primary-400">{role.position}</span>
+                        <span className="font-mono text-xs text-slate-600 ml-2">· {role.duration}</span>
                       </div>
-                    )}
-                  </div>
+                    ))
+                  ) : (
+                    <div>
+                      <span className="font-mono text-xs text-primary-400">{job.position}</span>
+                      <span className="font-mono text-xs text-slate-600 ml-2">· {job.duration}</span>
+                    </div>
+                  )}
                 </div>
               </div>
 
-              <ul className="space-y-2 pl-16">
+              <ul className="space-y-2.5">
                 {job.achievements.map((achievement, aIndex) => (
-                  <li key={aIndex} className="flex items-start gap-3 text-sm text-slate-600 leading-relaxed">
-                    <div className="mt-1.5 w-1.5 h-1.5 rounded-full bg-primary-600 flex-shrink-0"></div>
+                  <li key={aIndex} className="flex items-start gap-3 text-sm text-slate-400 leading-relaxed">
+                    <span className="mt-2 w-1 h-1 rounded-full flex-shrink-0" style={{ backgroundColor: 'var(--color-primary-500)' }}></span>
                     {achievement}
                   </li>
                 ))}
